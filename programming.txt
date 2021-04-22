@@ -200,4 +200,29 @@ int main()
         printf("not a happy number\n");
     return 0;
 }
+/*******************************************************************************************
+5. Write aprogram to convert a decimal number to binary. 
+Example : input 120
+output : 1111000
+
+You can write programs to perform the other conversions as well.
+Such as decimal to octal, hexa decimal vice versa .
+*******************************************************************************************/
+#include<stdio.h>
+int main()
+{
+    int num=120,rem,i=0;
+    int a[8];
+    printf("the given number is:%d \n",num);
+    while(num!=0)
+    {
+        rem=num%2;
+        a[i++]=rem;
+        num=num/2;
+    }
+    printf("the binary equivalent is:");
+    for(i=i-1;i>=0;i--)
+        printf("%d",a[i]);
+    return 0;
+}
 
